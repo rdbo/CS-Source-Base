@@ -46,7 +46,7 @@
 #include "public/game/client/iclientrendertargets.h"
 #include "public/game/client/iviewport.h"
 #include "public/globalvars_base.h"
-#include "public/iachievementmgr.h"
+/* #include "public/iachievementmgr.h" */
 #include "public/icliententity.h"
 #include "public/icliententitylist.h"
 #include "public/iclientnetworkable.h"
@@ -65,11 +65,13 @@
 #include "public/interpolatortypes.h"
 #include "public/iprediction.h"
 #include "public/irecipientfilter.h"
+/*
 #include "public/isaverestore.h"
 #include "public/iscratchpad3d.h"
 #include "public/iserverentity.h"
 #include "public/iservernetworkable.h"
 #include "public/iserverunknown.h"
+*/
 #include "public/ispatialpartition.h"
 #include "public/istudiorender.h"
 #include "public/ivguicenterprint.h"
@@ -99,7 +101,7 @@
 #include "public/networkvar.h"
 #include "public/overlaytext.h"
 #include "public/pixelwriter.h"
-#include "public/PlayerState.h"
+/* #include "public/PlayerState.h" */
 #include "public/rope_physics.h"
 #include "public/rope_shared.h"
 #include "public/r_efx.h"
@@ -135,7 +137,7 @@
 #include "public/tier1/convar.h"
 #include "public/tier1/fmtstr.h"
 #include "public/tier1/interface.h"
-#include "public/tier1/KeyValues.h"
+/* #include "public/tier1/KeyValues.h" */
 #include "public/tier1/mempool.h"
 #include "public/tier1/processor_detect.h"
 #include "public/tier1/rangecheckedvar.h"
@@ -217,6 +219,7 @@
 #include "public/worldsize.h"
 #include "public/zip_uncompressed.h"
 #include "steam/steam_api.h"
+/*
 #include "game/shared/achievementmgr.h"
 #include "game/shared/achievement_saverestore.h"
 #include "game/shared/activitylist.h"
@@ -353,12 +356,13 @@
 #include "game/shared/vphysics_sound.h"
 #include "game/shared/weapon_parse.h"
 #include "game/shared/weapon_proficiency.h"
-#include "game/client/achievement_notification_panel.h"
+*/
+/* #include "game/client/achievement_notification_panel.h" */
 #include "game/client/animationlayer.h"
 #include "game/client/baseanimatedtextureproxy.h"
 #include "game/client/baseclientrendertargets.h"
 #include "game/client/basepresence.h"
-#include "game/client/beamdraw.h"
+/* #include "game/client/beamdraw.h" */
 #include "game/client/bone_merge_cache.h"
 #include "game/client/cbase.h"
 #include "game/client/cdll_bounded_cvars.h"
@@ -368,22 +372,22 @@
 #include "game/client/cliententitylist.h"
 #include "game/client/clientleafsystem.h"
 #include "game/client/clientmode.h"
-#include "game/client/clientmode_shared.h"
+/* #include "game/client/clientmode_shared.h" */
 #include "game/client/clientsideeffects.h"
 #include "game/client/client_factorylist.h"
 #include "game/client/client_thinklist.h"
 #include "game/client/cl_animevent.h"
 #include "game/client/cl_mat_stub.h"
 #include "game/client/colorcorrectionmgr.h"
-#include "game/client/c_ai_basenpc.h"
+/* #include "game/client/c_ai_basenpc.h" */
 #include "game/client/c_baseanimating.h"
 #include "game/client/c_baseanimatingoverlay.h"
 #include "game/client/c_basecombatcharacter.h"
 #include "game/client/c_basecombatweapon.h"
 #include "game/client/c_basedoor.h"
-#include "game/client/c_baseentity.h"
+/* #include "game/client/c_baseentity.h" */
 #include "game/client/c_baseflex.h"
-#include "game/client/c_baseplayer.h"
+/* #include "game/client/c_baseplayer.h" */
 #include "game/client/c_basetempentity.h"
 #include "game/client/c_baseviewmodel.h"
 #include "game/client/c_breakableprop.h"
@@ -422,7 +426,7 @@
 #include "game/client/c_tracer.h"
 #include "game/client/c_user_message_register.h"
 #include "game/client/c_vehicle_jeep.h"
-#include "game/client/c_vguiscreen.h"
+/* #include "game/client/c_vguiscreen.h" */
 #include "game/client/c_weapon__stubs.h"
 #include "game/client/c_world.h"
 #include "game/client/detailobjectsystem.h"
@@ -444,6 +448,7 @@
 #include "game/client/fx_staticline.h"
 #include "game/client/fx_trail.h"
 #include "game/client/fx_water.h"
+/*
 #include "game/client/game_controls/baseviewport.h"
 #include "game/client/game_controls/clientscoreboarddialog.h"
 #include "game/client/game_controls/commandmenu.h"
@@ -456,8 +461,10 @@
 #include "game/client/game_controls/spectatorgui.h"
 #include "game/client/game_controls/teammenu.h"
 #include "game/client/game_controls/vguitextwindow.h"
+*/
 #include "game/client/glow_overlay.h"
 #include "game/client/history_resource.h"
+/*
 #include "game/client/hl2mp/clientmode_hl2mpnormal.h"
 #include "game/client/hl2mp/c_hl2mp_player.h"
 #include "game/client/hl2mp/hl2mp_hud_chat.h"
@@ -472,7 +479,9 @@
 #include "game/client/hl2/c_prop_combine_ball.h"
 #include "game/client/hl2/c_vehicle_crane.h"
 #include "game/client/hl2/hud_suitpower.h"
-#include "game/client/hltvcamera.h"
+*/
+/* #include "game/client/hltvcamera.h" */
+/*
 #include "game/client/hud.h"
 #include "game/client/hudelement.h"
 #include "game/client/hudtexturehandle.h"
@@ -488,7 +497,8 @@
 #include "game/client/hud_numericdisplay.h"
 #include "game/client/hud_pdump.h"
 #include "game/client/hud_vehicle.h"
-#include "game/client/iclassmap.h"
+*/
+/* #include "game/client/iclassmap.h" */
 #include "game/client/icliententityinternal.h"
 #include "game/client/iclientmode.h"
 #include "game/client/iclientshadowmgr.h"
@@ -502,7 +512,7 @@
 #include "game/client/imessagechars.h"
 #include "game/client/inetgraphpanel.h"
 #include "game/client/initializer.h"
-#include "game/client/input.h"
+/* #include "game/client/input.h" */
 #include "game/client/interpolatedvar.h"
 #include "game/client/in_main.h"
 #include "game/client/ipresence.h"
@@ -543,7 +553,7 @@
 #include "game/client/proxyentity.h"
 #include "game/client/ragdoll.h"
 #include "game/client/ragdollexplosionenumerator.h"
-#include "game/client/recvproxy.h"
+/* #include "game/client/recvproxy.h" */
 #include "game/client/rendertexture.h"
 #include "game/client/ScreenSpaceEffects.h"
 #include "game/client/simple_keys.h"
@@ -555,6 +565,7 @@
 #include "game/client/timedevent.h"
 #include "game/client/toggletextureproxy.h"
 #include "game/client/toolframework_client.h"
+/*
 #include "game/client/vguicenterprint.h"
 #include "game/client/vgui_avatarimage.h"
 #include "game/client/vgui_basepanel.h"
@@ -568,6 +579,7 @@
 #include "game/client/vgui_imagehealthpanel.h"
 #include "game/client/vgui_int.h"
 #include "game/client/vgui_video.h"
+*/
 #include "game/client/view.h"
 #include "game/client/viewangleanim.h"
 #include "game/client/ViewConeImage.h"
