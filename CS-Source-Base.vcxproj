@@ -787,6 +787,7 @@
     <ClInclude Include=".\include\hl2sdk-css\game\client\view_scene.h" />
     <ClInclude Include=".\include\hl2sdk-css\game\client\weapons_resource.h" />
     <ClInclude Include=".\include\hl2sdk-css\game\client\weapon_selection.h" />
+    <ClInclude Include="include\hl2sdk-css\hl2sdk.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
