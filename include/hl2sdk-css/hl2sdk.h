@@ -512,7 +512,7 @@
 #include "game/client/imessagechars.h"
 #include "game/client/inetgraphpanel.h"
 #include "game/client/initializer.h"
-/* #include "game/client/input.h" */
+#include "game/client/input.h"
 #include "game/client/interpolatedvar.h"
 #include "game/client/in_main.h"
 #include "game/client/ipresence.h"
