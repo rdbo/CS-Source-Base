@@ -96,6 +96,8 @@
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,6 +112,8 @@
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +130,8 @@
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,6 +150,8 @@
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,7 +163,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\hl2sdk-css\common\GameUI\IGameUI.h" />

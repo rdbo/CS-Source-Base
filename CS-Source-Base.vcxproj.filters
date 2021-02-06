@@ -4313,11 +4313,18 @@
     <Text Include="assets\readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\hl2sdk-css\utils\qc_eyes\res\QC_Eyes.rc2">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="include\hl2sdk-css\utils\smdlexp\smdlexp.def">
-      <Filter>Source Files</Filter>
-    </None>
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\bitmap.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\choreoobjects.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\dmxloader.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\mathlib.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\matsys_controls.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\particles.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\steam_api.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier0.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier1.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier2.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier3.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\vgui_controls.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\vstdlib.lib" />
   </ItemGroup>
 </Project>
