@@ -542,7 +542,6 @@
 #include "game/client/particle_prototype.h"
 #include "game/client/particle_simple3d.h"
 #include "game/client/particle_util.h"
-#include "game/client/pch.h"
 #include "game/client/perfvisualbenchmark.h"
 #include "game/client/physics.h"
 #include "game/client/physpropclientside.h"

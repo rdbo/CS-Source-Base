@@ -1,1 +1,1 @@
-Assets Folder.
+Assets folder.

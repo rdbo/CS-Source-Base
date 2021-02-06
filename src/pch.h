@@ -3,7 +3,7 @@
 #define PCH_H
 
 #include <cmath>
-#include <hl2sdk-css/hl2sdk.h>
 #include <Windows.h>
+#include <hl2sdk-css/hl2sdk.h>
 
 #endif

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -9,811 +9,1598 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>CS Source Base</ProjectName>
-    <ProjectGuid>{5FE91DC8-B6DF-4061-984E-36FD36623E72}</ProjectGuid>
-    <RootNamespace>CS Source Base</RootNamespace>
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{b275791b-25d1-4244-ad87-87a5b32d3819}</ProjectGuid>
+    <RootNamespace>CS_Source_Base</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <_ProjectFileVersion>16.0.28707.177</_ProjectFileVersion>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin</IntDir>
-    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
-    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin\</IntDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <LinkIncremental>true</LinkIncremental>
-    <GenerateManifest>false</GenerateManifest>
-    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
-    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin</IntDir>
-    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
-    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin\</IntDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <LinkIncremental>false</LinkIncremental>
-    <GenerateManifest>false</GenerateManifest>
-    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
-    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\$(Platform)\$(Configuration)\bin\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <PreBuildEvent>
-      <Command />
-    </PreBuildEvent>
     <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\include;.\src;.\assets;.\include\hl2sdk-css;.\include\hl2sdk-css\common;.\include\hl2sdk-css\public;.\include\hl2sdk-css\public\tier0;.\include\hl2sdk-css\public\tier1;.\include\hl2sdk-css\vgui2\include;.\include\hl2sdk-css\vgui2\controls;.\include\hl2sdk-css\game\shared;.\include\hl2sdk-css\game_controls;hl2mp\UI;.\include\hl2sdk-css\hl2mp;.\include\hl2sdk-css\game\shared\hl2mp;.\include\hl2sdk-css\hl2;.\include\hl2sdk-css\hl2\elements;.\include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;PROTECTED_THINGS_ENABLE;fopen=dont_use_fopen;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <MinimalRebuild>true</MinimalRebuild>
-      <ExceptionHandling />
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
-      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
-      <BrowseInformation />
-      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <ErrorReporting>Prompt</ErrorReporting>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
     <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)include\hl2sdk-css\lib\common;$(ProjectDir)include\hl2sdk-css\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ShowProgress>NotSet</ShowProgress>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>.\include\hl2sdk-css\lib\common;.\include\hl2sdk-css\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <BaseAddress>
-      </BaseAddress>
-      <TargetMachine>MachineX86</TargetMachine>
-      <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
     </Link>
-    <Xdcmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Xdcmake>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
-    </Bscmake>
-    <PostBuildEvent>
-      <Command />
-    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)include\hl2sdk-css\lib\common;$(ProjectDir)include\hl2sdk-css\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <PreBuildEvent>
-      <Command />
-    </PreBuildEvent>
     <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>.\include;.\src;.\assets;.\include\hl2sdk-css;.\include\hl2sdk-css\common;.\include\hl2sdk-css\public;.\include\hl2sdk-css\public\tier0;.\include\hl2sdk-css\public\tier1;.\include\hl2sdk-css\vgui2\include;.\include\hl2sdk-css\vgui2\controls;.\include\hl2sdk-css\game\shared;.\include\hl2sdk-css\game_controls;hl2mp\UI;.\include\hl2sdk-css\hl2mp;.\include\hl2sdk-css\game\shared\hl2mp;.\include\hl2sdk-css\hl2;.\include\hl2sdk-css\hl2\elements;.\include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;PROTECTED_THINGS_ENABLE;fopen=dont_use_fopen;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <ExceptionHandling />
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
-      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
-      <BrowseInformation />
-      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <ErrorReporting>Prompt</ErrorReporting>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ShowProgress>NotSet</ShowProgress>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>.\lib\common;.\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc;libcd;libcmtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <BaseAddress>
-      </BaseAddress>
-      <TargetMachine>MachineX86</TargetMachine>
-      <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)include\hl2sdk-css\lib\common;$(ProjectDir)include\hl2sdk-css\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <Xdcmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Xdcmake>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
-    </Bscmake>
-    <PostBuildEvent>
-      <Command />
-    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)assets;$(ProjectDir)include\hl2sdk-css;$(ProjectDir)include\hl2sdk-css\common;$(ProjectDir)include\hl2sdk-css\public;$(ProjectDir)include\hl2sdk-css\public\tier0;$(ProjectDir)include\hl2sdk-css\public\tier1;$(ProjectDir)include\hl2sdk-css\vgui2\include;$(ProjectDir)include\hl2sdk-css\vgui2\controls;$(ProjectDir)include\hl2sdk-css\game\shared;$(ProjectDir)include\hl2sdk-css\game_controls;hl2mp\UI;$(ProjectDir)include\hl2sdk-css\hl2mp;$(ProjectDir)include\hl2sdk-css\game\shared\hl2mp;$(ProjectDir)include\hl2sdk-css\hl2;$(ProjectDir)include\hl2sdk-css\hl2\elements;$(ProjectDir)include\hl2sdk-css\game\shared\hl2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NO_STRING_T;CLIENT_DLL;VECTOR;ENABLE_HTMLWINDOW;HL2MP;HL2_CLIENT_DLL;VERSION_SAFE_STEAM_API_INTERFACES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)include\hl2sdk-css\lib\common;$(ProjectDir)include\hl2sdk-css\include\hl2sdk-css\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include=".\include\hl2sdk-css\public\appframework\IAppSystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\basehandle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\basetypes.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bitvec.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bone_accessor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bone_setup.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bspfile.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bspflags.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\bsptreedata.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\cache_user.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\cdll_int.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\clientstats.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\client_class.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\client_render_handle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\client_textmessage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\cmodel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\collisionutils.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\Color.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\commonmacros.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\const.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\con_nprint.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\coordsize.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\crtmemdebug.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\datamap.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dlight.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dt_common.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dt_recv.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dt_send.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dt_utlvector_common.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\dt_utlvector_recv.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\edict.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\IClientLeafSystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\ICollideable.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\IEngineSound.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\IEngineTrace.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\ishadowmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\IStaticPropMgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\ivdebugoverlay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\IVEngineCache.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\ivmodelinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\engine\ivmodelrender.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\filesystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\filesystem_helpers.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\gamebspfile.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\gametrace.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\game\client\iclientrendertargets.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\game\client\iviewport.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\globalvars_base.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iachievementmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\icliententity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\icliententitylist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iclientnetworkable.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iclientrenderable.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iclientthinkable.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iclientunknown.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\icvar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iefx.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ienginevgui.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\igameevents.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\igameresources.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\IGameUIFuncs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ihandleentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\imapoverview.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\inetchannelinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\interpolatortypes.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iprediction.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\irecipientfilter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\isaverestore.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iscratchpad3d.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iserverentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iservernetworkable.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\iserverunknown.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ispatialpartition.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\istudiorender.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ivguicenterprint.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ivrenderview.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\jigglebones.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\keydefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterial.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterialproxy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterialsystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterialsystemhardwareconfig.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterialsystemstub.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imaterialvar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\imesh.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\materialsystem\itexture.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\amd3dx.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\bumpvects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\compressed_light_cube.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\compressed_vector.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\mathlib.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\polyhedron.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\vector.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\vector2d.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\vector4d.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\vmatrix.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mathlib\vplane.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\model_types.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\mouthinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\networkstringtabledefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\networkvar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\overlaytext.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\pixelwriter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\PlayerState.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\protected_things.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\rope_physics.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\rope_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\r_efx.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\s3_intrf.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\saverestoretypes.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\scratchpad3d.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\ScratchPadUtils.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\sentence.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\server_class.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\shake.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\shattersurfacetypes.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\simple_physics.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\soundchars.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\SoundEmitterSystem\isoundemittersystembase.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\soundflags.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\soundinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\stringregistry.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\string_t.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\studio.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\surfinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\texture_group_names.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\dbg.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\fasttimer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\l2cache.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\mem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\memalloc.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\memdbgoff.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\memdbgon.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\platform.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier0\vprof.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\bitbuf.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\characterset.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\checksum_md5.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\convar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\fmtstr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\interface.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\KeyValues.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\mempool.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\processor_detect.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\rangecheckedvar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\smartptr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\stringpool.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\strtools.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlbidirectionalset.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlbuffer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utldict.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlfixedlinkedlist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlfixedmemory.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlhash.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utllinkedlist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlmap.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlmemory.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlmultilist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlpriorityqueue.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlqueue.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlrbtree.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlstack.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlsymbol.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tier1\utlvector.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\tools\bonelist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vallocator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vcollide.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vcollide_parse.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\VGuiMatSurface\IMatSystemSurface.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\Cursor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\Dar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IClientPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IHTML.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IImage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IInput.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IInputInternal.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\ILocalize.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IScheme.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\ISurface.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\ISystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\IVGui.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\KeyCode.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\MessageMap.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\MouseCode.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui\VGUI.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\AnimationController.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Button.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\ComboBox.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Controls.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\EditablePanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\FocusNavGroup.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\HTML.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Image.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\ImageList.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\ImagePanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Label.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\ListPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Menu.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\MenuItem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\Panel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\PanelAnimationVar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\PanelListPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\PHandle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\RichText.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\ScrollBar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\SectionedListPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\TextEntry.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\TextImage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\TreeView.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\WizardPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vgui_controls\WizardSubPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\view_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vphysics\collision_set.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vphysics\constraints.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vphysics\friction.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vphysics\object_hash.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vphysics_interface.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vstdlib\ICommandLine.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vstdlib\IKeyValuesSystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vstdlib\random.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vstdlib\vstdlib.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\vtf\vtf.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\worldsize.h" />
-    <ClInclude Include=".\include\hl2sdk-css\public\zip_uncompressed.h" />
-    <ClInclude Include=".\include\hl2sdk-css\steam\steam_api.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\achievementmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\achievement_saverestore.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\activitylist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ai_activity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ai_debug_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ammodef.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\animation.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\apparent_velocity_helper.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\baseachievement.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\baseentity_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\basegrenade_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\baseparticleentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\baseplayer_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\baseviewmodel_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\base_playeranimstate.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\beam_flags.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\beam_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\choreoactor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\choreochannel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\choreoevent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\choreoscene.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\collisionproperty.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\cstrike\basecsgrenade_projectile.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\cstrike\fx_cs_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\cstrike\weapon_flashbang.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\cstrike\weapon_hegrenade.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\death_pose.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\decals.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\effect_color_tables.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\effect_dispatch_data.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ehandle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\entitydatainstantiator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\entitylist_base.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\entityparticletrail_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\env_detail_controller.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\env_wind_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\eventlist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\func_dust_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\func_ladder.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gameeventdefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\GameEventListener.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gamemovement.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gamerules_register.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gamestringpool.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\gamevars_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\groundlink.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hintmessage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hintsystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\hl2mp_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\hl2mp_player_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\hl2mp_weapon_parse.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_ar2.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbase.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbasehlmpcombatweapon.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbase_machinegun.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_physcannon.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_rpg.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2mp\weapon_slam.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\basehlcombatweapon_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\citadel_effects_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\env_headcrabcanister_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\hl2_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\hl2_player_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\hl2_shareddefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\hl_gamemovement.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\hl2\hl_movedata.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ichoreoeventcallback.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\IEffects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\igamemovement.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\igamesystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\imovehelper.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\interval.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\in_buttons.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\iplayeranimstate.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ipredictionsystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\itempents.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\IVehicle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\mapdata_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\mapentities_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\movevars_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\mp_shareddefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\multiplay_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\npcevent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\obstacle_pushaway.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\particle_parse.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\particle_property.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\physics_saverestore.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\physics_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\playernet_vars.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\point_bonusmaps_accessor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\point_posecontroller.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\positionwatcher.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\precache_register.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\precipitation_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\predictableid.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\predictable_entity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\predicted_viewmodel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\predictioncopy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\ragdoll_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\rope_helpers.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\saverestore.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\saverestore_bitstring.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\saverestore_utlclass.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\saverestore_utlsymbol.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\saverestore_utlvector.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\sceneentity_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\scriptevent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\sequence_Transitioner.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\shareddefs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\sharedInterface.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\shared_classnames.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\sheetsimulator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\shot_manipulator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\simtimer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\singleplay_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\solidsetdefaults.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\soundenvelope.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\Sprite.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\SpriteTrail.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\sun_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\takedamageinfo.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\teamplayroundbased_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\teamplay_gamerules.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\tempentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\tf2\weapon_objectselection.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\touchlink.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\usercmd.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\usermessages.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\util_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\vehicle_choreo_generic_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\vehicle_viewblend_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\vgui_defaultinputsignal.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\viewport_panel_names.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\voice_banmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\voice_common.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\voice_gamemgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\voice_status.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\vphysics_sound.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\weapon_parse.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\shared\weapon_proficiency.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\achievement_notification_panel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\animationlayer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\baseanimatedtextureproxy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\baseclientrendertargets.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\basepresence.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\beamdraw.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\bone_merge_cache.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cbase.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cdll_bounded_cvars.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cdll_client_int.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cdll_util.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\clienteffectprecachesystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cliententitylist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\clientleafsystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\clientmode.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\clientmode_shared.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\clientsideeffects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\client_factorylist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\client_thinklist.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cl_animevent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cl_mat_stub.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\colorcorrectionmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cstrike\fx_cs_blood.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\cstrike\hud_radar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_ai_basenpc.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseanimating.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseanimatingoverlay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_basecombatcharacter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_basecombatweapon.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_basedoor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseflex.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseplayer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_basetempentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_baseviewmodel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_breakableprop.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_effects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_entitydissolve.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_env_fog_controller.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_fire_smoke.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_func_dust.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_func_reflective_glass.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_gib.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_impact_effects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_physbox.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_physicsprop.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_pixel_visibility.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_playerlocaldata.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_playerresource.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_point_camera.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_props.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_prop_vehicle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_recipientfilter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_rope.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_rumble.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_sceneentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_slideshow_display.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_smoke_trail.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_soundscape.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_sprite.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_sun.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_team.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_team_objectiveresource.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_tesla.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_te_basebeam.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_te_effect_dispatch.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_te_legacytempents.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_te_particlesystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_tracer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_user_message_register.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_vehicle_jeep.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_vguiscreen.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_weapon__stubs.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\c_world.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\detailobjectsystem.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\enginesprite.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\flashlighteffect.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fontabc.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\functionproxy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_blood.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_discreetline.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_envelope.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_explosion.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_fleck.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_impact.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_interpvalue.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_line.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_quad.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_sparks.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_staticline.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_trail.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\fx_water.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\baseviewport.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\clientscoreboarddialog.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\commandmenu.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\IconPanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\imagemouseoverbutton.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\intromenu.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\mapoverview.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\mouseoverhtmlbutton.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\mouseoverpanelbutton.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\spectatorgui.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\teammenu.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\game_controls\vguitextwindow.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\glow_overlay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\history_resource.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\clientmode_hl2mpnormal.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\c_hl2mp_player.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\hl2mp_hud_chat.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\ui\backgroundpanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\ui\hl2mpclientscoreboard.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2mp\ui\hl2mptextwindow.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_basehelicopter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_basehlcombatweapon.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_basehlplayer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_corpse.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_hl2_playerlocaldata.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_prop_combine_ball.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\c_vehicle_crane.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hl2\hud_suitpower.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hltvcamera.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hudelement.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hudtexturehandle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_basechat.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_basetimer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_bitmapnumericdisplay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_chat.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_closecaption.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_crosshair.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_element_helper.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_lcd.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_macros.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_numericdisplay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_pdump.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\hud_vehicle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iclassmap.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\icliententityinternal.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iclientmode.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iclientshadowmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iclientvehicle.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iconsole.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\idebugoverlaypanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ifpspanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ihudlcd.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iinput.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iloadingdisc.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\imessagechars.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\inetgraphpanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\initializer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\input.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\interpolatedvar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\in_main.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ipresence.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iprofiling.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\itextmessage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ivieweffects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iviewrender.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\iviewrender_beams.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ivmodemanager.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\kbutton.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\lerp_functions.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\menu.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\movehelper_client.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\mp3player.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\networkstringtable_clientdll.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\panelmetaclassmgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particledraw.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particlemgr.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particlesphererenderer.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particles_attractor.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particles_ez.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particles_localspace.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particles_simple.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_collision.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_iterators.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_litsmokeemitter.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_prototype.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_simple3d.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\particle_util.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\pch.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\perfvisualbenchmark.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\physics.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\physpropclientside.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\playerandobjectenumerator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\playerenumerator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\prediction.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\prediction_private.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\proxyentity.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ragdoll.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ragdollexplosionenumerator.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\recvproxy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\rendertexture.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ScreenSpaceEffects.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\simple_keys.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\smoke_fog_overlay.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\splinepatch.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\TeamBitmapImage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\tempent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\text_message.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\tf2\vgui_healthbar.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\timedevent.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\toggletextureproxy.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\toolframework_client.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vguicenterprint.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_avatarimage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_basepanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_bitmapbutton.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_bitmapimage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_bitmappanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_entityimagepanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_entitypanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_grid.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_helpers.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_imagehealthpanel.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_int.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\vgui_video.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\view.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\viewangleanim.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\ViewConeImage.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\viewdebug.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\viewpostprocess.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\viewrender.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\view_scene.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\weapons_resource.h" />
-    <ClInclude Include=".\include\hl2sdk-css\game\client\weapon_selection.h" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\hl2sdk-css\common\GameUI\IGameUI.h" />
+    <ClInclude Include="include\hl2sdk-css\common\hl2orange.spa.h" />
+    <ClInclude Include="include\hl2sdk-css\common\ifilesystemopendialog.h" />
+    <ClInclude Include="include\hl2sdk-css\common\studiobyteswap.h" />
+    <ClInclude Include="include\hl2sdk-css\common\xbox\xboxstubs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\achievement_notification_panel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\animationlayer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\baseanimatedtextureproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\baseclientrendertargets.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\basepresence.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\beamdraw.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\bonetoworldarray.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\bone_merge_cache.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cbase.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cdll_bounded_cvars.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cdll_client_int.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cdll_util.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clienteffectprecachesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cliententitylist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clientleafsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clientmode.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clientmode_normal.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clientmode_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\clientsideeffects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\client_factorylist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\client_thinklist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cl_animevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\cl_mat_stub.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\colorcorrectionmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\commentary_modelviewer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_ai_basenpc.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseanimating.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseanimatingoverlay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_basecombatcharacter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_basecombatweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_basedoor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseflex.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseplayer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_basetempentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_baseviewmodel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_breakableprop.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_effects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_entitydissolve.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_env_fog_controller.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\C_Env_Projected_Texture.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_fire_smoke.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_func_dust.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_func_reflective_glass.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_gib.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_impact_effects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_physbox.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_physicsprop.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_pixel_visibility.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_playerlocaldata.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_playerresource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_point_camera.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_props.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_prop_vehicle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_recipientfilter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_rope.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_rumble.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_sceneentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_slideshow_display.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_smoke_trail.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_soundscape.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_sprite.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_sun.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_team.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_team_objectiveresource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_team_train_watcher.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_tesla.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_te_basebeam.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_te_effect_dispatch.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_te_legacytempents.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_te_particlesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_tracer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_user_message_register.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_vehicle_jeep.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_vguiscreen.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_weapon__stubs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\c_world.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\detailobjectsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\enginesprite.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\episodic\episodic_screenspaceeffects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\flashlighteffect.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fontabc.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\functionproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_blood.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_discreetline.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_envelope.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_explosion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_fleck.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_impact.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_interpvalue.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_line.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_quad.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_sparks.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_staticline.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_trail.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\fx_water.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\basemodelpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\basemodel_panel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\baseviewport.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\buymenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\buysubmenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\classmenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\clientscoreboarddialog.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\commandmenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\IconPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\imagemouseoverbutton.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\intromenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\mapoverview.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\mouseoverhtmlbutton.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\mouseoverpanelbutton.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\NavProgress.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\spectatorgui.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\teammenu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\game_controls\vguitextwindow.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\glow_overlay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\history_resource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\clientmode_hl2mpnormal.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\c_hl2mp_player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\hl2mp_hud_chat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\ui\backgroundpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\ui\hl2mpclientscoreboard.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2mp\ui\hl2mptextwindow.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\clientmode_hlnormal.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_basehelicopter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_basehlcombatweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_basehlplayer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_corpse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_hl2_playerlocaldata.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_prop_combine_ball.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\c_vehicle_crane.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\hud_radar.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hl2\hud_suitpower.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hltvcamera.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hudelement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hudtexturehandle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_basechat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_basedeathnotice.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_basetimer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_base_account.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_bitmapnumericdisplay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_chat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_closecaption.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_controlpointicons.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_crosshair.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_element_helper.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_lcd.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_macros.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_numericdisplay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_pdump.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\hud_vehicle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iclassmap.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\icliententityinternal.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iclientmode.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iclientshadowmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iclientvehicle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iconsole.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\idebugoverlaypanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ifpspanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ihudlcd.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iinput.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iloadingdisc.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\imessagechars.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\inetgraphpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\initializer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\input.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\interpolatedvar.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\in_main.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ipresence.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iprofiling.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\itextmessage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ivieweffects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iviewrender.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\iviewrender_beams.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ivmodemanager.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\kbutton.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\lerp_functions.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\menu.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\movehelper_client.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\mp3player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\networkstringtable_clientdll.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\panelmetaclassmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particledraw.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particlemgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particlesphererenderer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particles_attractor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particles_ez.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particles_localspace.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particles_new.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particles_simple.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_collision.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_iterators.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_litsmokeemitter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_prototype.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_simple3d.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\particle_util.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\perfvisualbenchmark.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\physics.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\physpropclientside.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\playerandobjectenumerator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\playerenumerator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\prediction.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\prediction_private.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\proxyentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ragdoll.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ragdollexplosionenumerator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\recvproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\rendertexture.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ScreenSpaceEffects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\clientmode_sdk.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\c_sdk_player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\c_sdk_team.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\sdk_hud_chat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\vgui\sdkviewport.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\sdk\vgui\vgui_rootpanel_sdk.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\simple_keys.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\smoke_fog_overlay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\splinepatch.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\TeamBitmapImage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\tempent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\text_message.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\timedevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\toggletextureproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\toolframework_client.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vguicenterprint.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_avatarimage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_basepanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_bitmapbutton.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_bitmapimage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_bitmappanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_entityimagepanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_entitypanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_game_viewport.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_grid.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_imagehealthpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_int.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\vgui_video.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\view.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\viewangleanim.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\ViewConeImage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\viewdebug.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\viewpostprocess.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\viewrender.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\view_scene.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\weapons_resource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\client\weapon_selection.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\actanimating.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_baseactor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_basehumanoid.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_basenpc.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_basenpc_flyer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_basenpc_flyer_new.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_basenpc_physicsflyer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_assault.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_fear.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_follow.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_lead.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_passenger.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_rappel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_behavior_standoff.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_blended_movement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_component.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_condition.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\AI_Criteria.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_debug.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_default.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_dynamiclink.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_eventresponse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_goalentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_hint.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_hull.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_initutils.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\AI_Interest_Target.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_link.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_localnavigator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_looktarget.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_memory.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_motor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_moveprobe.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_moveshoot.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_movesolver.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_movetypes.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_namespaces.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_navgoaltype.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_navigator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_navtype.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_network.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_networkmanager.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_node.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_npcstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_obstacle_type.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_pathfinder.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_planesolver.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_playerally.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\AI_ResponseSystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_route.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_routedist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_saverestore.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_schedule.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_scriptconditions.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_senses.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_sentence.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_speech.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_speechfilter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_squad.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_squadslot.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_tacticalservices.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_task.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_trackpather.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_utils.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ai_waypoint.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\baseanimating.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\BaseAnimatingOverlay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basebludgeonweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basecombatcharacter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basecombatweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\baseentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\baseflex.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basemultiplayerplayer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\baseprojectile.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\BasePropDoor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basetempentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\basetoggle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\baseviewmodel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\base_transmit_proxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\bitstring.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\buttons.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\cbase.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\client.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\cplane.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\CRagdollMagnet.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\damagemodifier.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\data_collector.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\doors.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\effects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\enginecallback.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\entityapi.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\entityblocker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EntityDissolve.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EntityFlame.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\entityinput.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\entitylist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\entityoutput.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EntityParticleTrail.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EnvLaser.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EnvMessage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\envmicrophone.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\env_debughistory.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\env_player_surface_trigger.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\env_zoom.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\ai_behavior_alyx_injured.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\ai_behavior_passenger_companion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\ai_behavior_passenger_zombie.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\ep1_gamestats.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\ep2_gamestats.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\grenade_hopwire.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\npc_hunter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\vehicle_jeep_episodic.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\episodic\weapon_striderbuster.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\EventLog.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\eventqueue.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\event_tempentity_tester.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\explode.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\filters.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\fire.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\fire_smoke.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\fish.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\fogcontroller.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\fourwheelvehiclephysics.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\func_areaportalbase.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\func_areaportalwindow.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\func_break.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\func_breakablesurf.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\func_movelinear.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\game.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\gameinterface.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\gameweaponmanager.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\gib.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\globals.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\globalstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\globalstate_private.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\grenadethrown.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hierarchy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl1_CBaseHelicopter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\grenade_satchel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\grenade_tripmine.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\hl2mp_bot_temp.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\hl2mp_cvars.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\hl2mp_gameinterface.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\hl2mp_player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2mp\te_hl2mp_shotgun_shot.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_behavior_actbusy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_behavior_functank.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_behavior_holster.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_behavior_operator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_behavior_police.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_goal_police.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_interactions.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ai_spotlight.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\antlion_dust.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\antlion_maker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\ar2_explosion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\assassin_smoke.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\basehlcombatweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\cbasehelicopter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\cbasespriteprojectile.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\combine_mine.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\energy_wave.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\env_speaker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\extinguisherjet.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\func_bulletshield.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\func_tank.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_ar2.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_beam.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_brickbat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_bugbait.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_energy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_frag.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_homer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_molotov.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_pathfollower.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_satchel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_spit.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_tripmine.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\grenade_tripwire.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\hl2_gamestats.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\hl2_player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\hl2_playerlocaldata.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\info_darknessmode_lightsource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\item_dynamic_resupply.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_alyx.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_alyx_episodic.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_antlion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_antliongrub.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_assassin.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_attackchopper.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_barnacle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_basescanner.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_BaseZombie.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_bullseye.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_bullsquid.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_citizen17.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_combine.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_combines.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_crow.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_headcrab.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_houndeye.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_hydra.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_manhack.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_metropolice.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_playercompanion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_rollermine.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_scanner.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_stalker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_strider.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_turret_floor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_turret_ground.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\npc_vortigaunt_episodic.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\prop_combine_ball.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\rotorwash.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\script_intro.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\vehicle_apc.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\vehicle_crane.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\vehicle_jeep.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_alyxgun.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_ar2.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_brickbat.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_citizenpackage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_crowbar.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_flaregun.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_gauss.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_molotov.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_physcannon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_rpg.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_slam.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_stunstick.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hl2\weapon_tripwire.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\hltvdirector.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\h_cycler.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ilagcompensationmanager.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\info_camera_link.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\init_factory.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\iscorer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\iservervehicle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\items.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\lights.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\locksounds.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\logicrelay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\mapentities.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\maprules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\modelentities.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\monstermaker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\movehelper_server.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\movie_explosion.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_area.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_colors.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_ladder.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_mesh.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_node.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\nav_pathfind.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ndebugoverlay.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\networkstringtable_gamedll.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\npc_talker.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\npc_vehicledriver.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\particle_fire.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\particle_light.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\particle_smokegrenade.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\particle_system.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\pathtrack.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physconstraint_sounds.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_bone_follower.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_cannister.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_collisionevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_fx.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_impact_damage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_npc_solver.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physics_prop_ragdoll.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\physobj.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\phys_controller.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\plasma.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\playerinfomanager.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\playerlocaldata.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\player_command.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\player_pickup.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\player_resource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\point_camera.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\point_template.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\props.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\pushentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\RagdollBoogie.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\recipientfilter.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\rope.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sceneentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\scratchpad_gamedll_helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\scripted.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\scriptedtarget.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sdk\sdk_bot_temp.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sdk\sdk_player.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sdk\sdk_team.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sdk\te_firebullets.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\sendproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\serverbenchmark_base.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\ServerNetworkProperty.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\SkyCamera.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\smokestack.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\smoke_trail.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\soundent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\soundscape.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\soundscape_system.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\spark.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\spotlightend.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\steamjet.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\te.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_control_point.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_control_point_master.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_control_point_round.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_objectiveresource.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_spawnpoint.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\team_train_watcher.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\TemplateEntities.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\tesla.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\test_stressentities.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\textstatsmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\te_basebeam.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\te_effect_dispatch.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\te_particlesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\timedeventmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\toolframework_server.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\trains.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\triggers.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\trigger_area_capture.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\util.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\variant_t.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\vehicle_base.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\vehicle_baseserver.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\vehicle_sounds.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\vguiscreen.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\waterbullet.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\wcedit.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\worker_scientist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\server\world.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\achievementmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\achievement_saverestore.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\activitylist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ai_activity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ai_debug_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ammodef.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\animation.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\apparent_velocity_helper.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\baseachievement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\basecombatweapon_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\baseentity_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\basegrenade_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\baseparticleentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\baseplayer_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\baseviewmodel_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\base_playeranimstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\beam_flags.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\beam_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\choreoactor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\choreochannel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\choreoevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\choreoscene.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\collisionproperty.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\death_pose.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\debugoverlay_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\decals.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\effect_color_tables.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\effect_dispatch_data.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ehandle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\entitydatainstantiator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\entitylist_base.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\entityparticletrail_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\env_detail_controller.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\env_meteor_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\env_wind_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\episodic\npc_advisor_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\eventlist.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\expressionsample.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\forcefeedback.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\func_dust_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\func_ladder.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gameeventdefs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\GameEventListener.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gamemovement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gamerules_register.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\GameStats.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gamestringpool.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\gamevars_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\groundlink.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hintmessage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hintsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\hl2mp_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\hl2mp_player_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\hl2mp_weapon_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_ar2.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_crowbar.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbase.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbasebasebludgeon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbasehlmpcombatweapon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_hl2mpbase_machinegun.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_physcannon.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_rpg.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2mp\weapon_slam.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\basehlcombatweapon_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\citadel_effects_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\env_alyxemp_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\env_headcrabcanister_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl2_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl2_player_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl2_shareddefs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl2_vehicle_radar.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl_gamemovement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\hl2\hl_movedata.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ichoreoeventcallback.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\IEffects.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\igamemovement.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\igamesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\imovehelper.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\interval.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\in_buttons.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\iplayeranimstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ipredictionsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\iscenetokenprocessor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\itempents.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\IVehicle.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\mapdata_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\mapentities_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ModelSoundsCache.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\movetype_push.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\movevars_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\mp_shareddefs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\Multiplayer\multiplayer_animstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\multiplay_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\npcevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\obstacle_pushaway.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\particle_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\particle_property.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\particle_property_inlines.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\physics_saverestore.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\physics_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\playerclass_info_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\playernet_vars.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\point_bonusmaps_accessor.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\point_posecontroller.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\positionwatcher.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\precache_register.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\precipitation_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\predictableid.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\predictable_entity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\predicted_viewmodel.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\predictioncopy.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\props_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\ragdoll_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\rope_helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\rumble_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_bitstring.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_stringtable.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_utlclass.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_utlmap.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_utlrbtree.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_utlsymbol.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\saverestore_utlvector.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\SceneCache.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sceneentity_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sceneimage.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\scriptevent.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_basegrenade_projectile.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_fx_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_playeranimstate.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_shareddefs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\sdk_weapon_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\weapon_basesdkgrenade.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\weapon_grenade.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sdk\weapon_sdkbase.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sequence_Transitioner.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\shareddefs.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sharedInterface.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\shared_classnames.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sheetsimulator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\shot_manipulator.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\simtimer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\singleplay_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\solidsetdefaults.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\soundenvelope.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\Sprite.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\SpriteTrail.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\sun_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\takedamageinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\teamplayroundbased_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\teamplay_gamerules.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\teamplay_round_timer.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\tempentity.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\touchlink.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\usercmd.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\usermessages.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\util_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\vehicle_choreo_generic_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\vehicle_viewblend_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\vgui_defaultinputsignal.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\viewport_panel_names.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\voice_banmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\voice_common.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\voice_gamemgr.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\voice_status.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\vphysicsupdateai.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\vphysics_sound.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\weapon_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\game\shared\weapon_proficiency.h" />
     <ClInclude Include="include\hl2sdk-css\hl2sdk.h" />
+    <ClInclude Include="include\hl2sdk-css\mathlib\noisedata.h" />
+    <ClInclude Include="include\hl2sdk-css\mathlib\sse.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\AppFramework.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\IAppSystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\IAppSystemGroup.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\ilaunchermgr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\tier2app.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\tier3app.h" />
+    <ClInclude Include="include\hl2sdk-css\public\appframework\VguiMatSysApp.h" />
+    <ClInclude Include="include\hl2sdk-css\public\arraystack.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ATI_Compress.h" />
+    <ClInclude Include="include\hl2sdk-css\public\avi\iavi.h" />
+    <ClInclude Include="include\hl2sdk-css\public\avi\ibik.h" />
+    <ClInclude Include="include\hl2sdk-css\public\basehandle.h" />
+    <ClInclude Include="include\hl2sdk-css\public\BitmapFontFile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\bitmap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\cubemap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\float_bm.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\imageformat.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\psd.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\tgaloader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitmap\tgawriter.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bitvec.h" />
+    <ClInclude Include="include\hl2sdk-css\public\blockingudpsocket.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bone_accessor.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bone_setup.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bspfile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bspflags.h" />
+    <ClInclude Include="include\hl2sdk-css\public\bsptreedata.h" />
+    <ClInclude Include="include\hl2sdk-css\public\builddisp.h" />
+    <ClInclude Include="include\hl2sdk-css\public\captioncompiler.h" />
+    <ClInclude Include="include\hl2sdk-css\public\cdll_int.h" />
+    <ClInclude Include="include\hl2sdk-css\public\chunkfile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\clientstats.h" />
+    <ClInclude Include="include\hl2sdk-css\public\client_class.h" />
+    <ClInclude Include="include\hl2sdk-css\public\client_render_handle.h" />
+    <ClInclude Include="include\hl2sdk-css\public\client_textmessage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\cmodel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\collisionutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Color.h" />
+    <ClInclude Include="include\hl2sdk-css\public\const.h" />
+    <ClInclude Include="include\hl2sdk-css\public\con_nprint.h" />
+    <ClInclude Include="include\hl2sdk-css\public\coordsize.h" />
+    <ClInclude Include="include\hl2sdk-css\public\crtmemdebug.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datacache\idatacache.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datacache\imdlcache.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\attributeflags.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmattribute.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmattributetypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmattributevar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmehandle.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmelement.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmelementfactoryhelper.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmelementhandle.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\dmvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\datamodel\idatamodel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\demofile\demoformat.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dispcoll.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dispcoll_common.h" />
+    <ClInclude Include="include\hl2sdk-css\public\disp_common.h" />
+    <ClInclude Include="include\hl2sdk-css\public\disp_powerinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\disp_tesselate.h" />
+    <ClInclude Include="include\hl2sdk-css\public\disp_vertindex.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dlight.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dmserializers\idmserializers.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dmxloader\dmxattribute.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dmxloader\dmxelement.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dmxloader\dmxloader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_common.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_recv.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_send.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_utlvector_common.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_utlvector_recv.h" />
+    <ClInclude Include="include\hl2sdk-css\public\dt_utlvector_send.h" />
+    <ClInclude Include="include\hl2sdk-css\public\edict.h" />
+    <ClInclude Include="include\hl2sdk-css\public\editor_sendcommand.h" />
+    <ClInclude Include="include\hl2sdk-css\public\eiface.h" />
+    <ClInclude Include="include\hl2sdk-css\public\eifaceV21.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\IClientLeafSystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\ICollideable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\IEngineSound.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\IEngineTrace.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\imatchmaking.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\iserverplugin.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\ishadowmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\IStaticPropMgr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\ivdebugoverlay.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\ivmodelinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\ivmodelrender.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\SndInfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine\view_sharedv1.h" />
+    <ClInclude Include="include\hl2sdk-css\public\engine_hlds_api.h" />
+    <ClInclude Include="include\hl2sdk-css\public\event_flags.h" />
+    <ClInclude Include="include\hl2sdk-css\public\filesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\filesystem\IQueuedLoader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\filesystem_helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\public\filesystem_init.h" />
+    <ClInclude Include="include\hl2sdk-css\public\filesystem_passthru.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Friends\AddOns\AddOnMessages.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Friends\AddOns\AddOnTypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Friends\AddOns\ISteamAddOn.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Friends\IFriendsNET.h" />
+    <ClInclude Include="include\hl2sdk-css\public\Friends\IFriendsUser.h" />
+    <ClInclude Include="include\hl2sdk-css\public\g15\ig15.h" />
+    <ClInclude Include="include\hl2sdk-css\public\gamebspfile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\gametrace.h" />
+    <ClInclude Include="include\hl2sdk-css\public\game\client\iclientrendertargets.h" />
+    <ClInclude Include="include\hl2sdk-css\public\game\client\IGameClientExports.h" />
+    <ClInclude Include="include\hl2sdk-css\public\game\client\iviewport.h" />
+    <ClInclude Include="include\hl2sdk-css\public\game\server\iplayerinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\globalvars_base.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iachievementmgr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ibsppack.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iclient.h" />
+    <ClInclude Include="include\hl2sdk-css\public\icliententity.h" />
+    <ClInclude Include="include\hl2sdk-css\public\icliententitylist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iclientnetworkable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iclientrenderable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iclientthinkable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iclientunknown.h" />
+    <ClInclude Include="include\hl2sdk-css\public\icvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\idedicatedexports.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iefx.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ienginevgui.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ifilelist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\igameevents.h" />
+    <ClInclude Include="include\hl2sdk-css\public\igameresources.h" />
+    <ClInclude Include="include\hl2sdk-css\public\IGameUIFuncs.h" />
+    <ClInclude Include="include\hl2sdk-css\public\IHammer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ihandleentity.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ihltv.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ihltvdirector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ilaunchabledll.h" />
+    <ClInclude Include="include\hl2sdk-css\public\imapoverview.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inetchannel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inetchannelinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inetmessage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inetmsghandler.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inetwork.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inputsystem\AnalogCode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inputsystem\ButtonCode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inputsystem\iinputsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\inputsystem\InputEnums.h" />
+    <ClInclude Include="include\hl2sdk-css\public\interpolatortypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iprediction.h" />
+    <ClInclude Include="include\hl2sdk-css\public\irecipientfilter.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iregistry.h" />
+    <ClInclude Include="include\hl2sdk-css\public\isaverestore.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iscratchpad3d.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iserver.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iserverentity.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iservernetworkable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\iserverunknown.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ishadercompiledll.h" />
+    <ClInclude Include="include\hl2sdk-css\public\isoundcombiner.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ispatialpartition.h" />
+    <ClInclude Include="include\hl2sdk-css\public\isqlwrapper.h" />
+    <ClInclude Include="include\hl2sdk-css\public\istudiorender.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivguicenterprint.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivoiceserver.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivoicetweak.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivraddll.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivrenderview.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ivtex.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ixboxsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\jigglebones.h" />
+    <ClInclude Include="include\hl2sdk-css\public\jpeglib\jconfig.h" />
+    <ClInclude Include="include\hl2sdk-css\public\jpeglib\jmorecfg.h" />
+    <ClInclude Include="include\hl2sdk-css\public\jpeglib\jpeglib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\keyframe\keyframe.h" />
+    <ClInclude Include="include\hl2sdk-css\public\keyvaluescompiler.h" />
+    <ClInclude Include="include\hl2sdk-css\public\list.h" />
+    <ClInclude Include="include\hl2sdk-css\public\loadcmdline.h" />
+    <ClInclude Include="include\hl2sdk-css\public\localflexcontroller.h" />
+    <ClInclude Include="include\hl2sdk-css\public\lumpfiles.h" />
+    <ClInclude Include="include\hl2sdk-css\public\map_utils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\deformations.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\hardwareverts.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\IColorCorrection.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\idebugtextureinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterial.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialproxy.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialproxyfactory.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialsystemhardwareconfig.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialsystemstub.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imaterialvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imesh.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\imorph.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\IShader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\ishaderapi.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\itexture.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\ivballoctracker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\MaterialSystemUtil.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\materialsystem_config.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\meshreader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\materialsystem\shader_vcs_version.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\anorms.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\bumpvects.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\compressed_3d_unitvec.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\compressed_light_cube.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\compressed_vector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\halton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\IceKey.H" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\lightdesc.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\mathlib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\math_pfns.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\noise.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\polyhedron.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\quantize.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\simdvectormatrix.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\spherical_geometry.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\ssemath.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\ssequaternion.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\vector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\vector2d.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\vector4d.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\vmatrix.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mathlib\vplane.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\assetpicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\baseassetpicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\colorpickerpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\curveeditorpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\gamefiletreeview.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\manipulator.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\matsyscontrols.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\mdlpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\mdlpicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\mdlsequencepicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\picker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\potterywheelpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\proceduraltexturepanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\QCGenerator.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\sequencepicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\tgapreviewpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\vmtpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\vmtpicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\vmtpreviewpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\vtfpicker.h" />
+    <ClInclude Include="include\hl2sdk-css\public\matsys_controls\vtfpreviewpanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\IMayaVGui.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\valveMaya.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\ValveMaya\HyperShadeUtil.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\ValveMaya\Undo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\VsMayaDmx.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\VsMayaMPxFactory.h" />
+    <ClInclude Include="include\hl2sdk-css\public\maya\VsVGuiWindow.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mdllib\mdllib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\measure_section.h" />
+    <ClInclude Include="include\hl2sdk-css\public\model_types.h" />
+    <ClInclude Include="include\hl2sdk-css\public\modes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\mouthinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\networkstringtabledefs.h" />
+    <ClInclude Include="include\hl2sdk-css\public\networkvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\nmatrix.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ntree.h" />
+    <ClInclude Include="include\hl2sdk-css\public\nvector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\nvtc.h" />
+    <ClInclude Include="include\hl2sdk-css\public\OfflineMode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\optimize.h" />
+    <ClInclude Include="include\hl2sdk-css\public\overlaytext.h" />
+    <ClInclude Include="include\hl2sdk-css\public\p4lib\ip4.h" />
+    <ClInclude Include="include\hl2sdk-css\public\particles\particles.h" />
+    <ClInclude Include="include\hl2sdk-css\public\phonemeconverter.h" />
+    <ClInclude Include="include\hl2sdk-css\public\phonemeextractor\phonemeextractor.h" />
+    <ClInclude Include="include\hl2sdk-css\public\phyfile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\pixelwriter.h" />
+    <ClInclude Include="include\hl2sdk-css\public\PlayerState.h" />
+    <ClInclude Include="include\hl2sdk-css\public\posedebugger.h" />
+    <ClInclude Include="include\hl2sdk-css\public\raytrace.h" />
+    <ClInclude Include="include\hl2sdk-css\public\renderparm.h" />
+    <ClInclude Include="include\hl2sdk-css\public\rope_physics.h" />
+    <ClInclude Include="include\hl2sdk-css\public\rope_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\public\r_efx.h" />
+    <ClInclude Include="include\hl2sdk-css\public\savegame_version.h" />
+    <ClInclude Include="include\hl2sdk-css\public\saverestoretypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\scenefilecache\ISceneFileCache.h" />
+    <ClInclude Include="include\hl2sdk-css\public\scenefilecache\SceneImageFile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\scratchpad3d.h" />
+    <ClInclude Include="include\hl2sdk-css\public\ScratchPadUtils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\sentence.h" />
+    <ClInclude Include="include\hl2sdk-css\public\server_class.h" />
+    <ClInclude Include="include\hl2sdk-css\public\shaderlib\BaseShader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\shaderlib\cshader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\shaderlib\ShaderDLL.h" />
+    <ClInclude Include="include\hl2sdk-css\public\shake.h" />
+    <ClInclude Include="include\hl2sdk-css\public\shattersurfacetypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\simple_physics.h" />
+    <ClInclude Include="include\hl2sdk-css\public\smooth_average.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundchars.h" />
+    <ClInclude Include="include\hl2sdk-css\public\SoundEmitterSystem\isoundemittersystembase.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundflags.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundsystem\isoundsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundsystem\snd_audio_source.h" />
+    <ClInclude Include="include\hl2sdk-css\public\soundsystem\snd_device.h" />
+    <ClInclude Include="include\hl2sdk-css\public\stdstring.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamapps.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamclient.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamfriends.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteammatchmaking.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamuser.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamuserstats.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\isteamutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\matchmakingtypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\steamclientpublic.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\steamtypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\steam\steam_api.h" />
+    <ClInclude Include="include\hl2sdk-css\public\stringregistry.h" />
+    <ClInclude Include="include\hl2sdk-css\public\string_t.h" />
+    <ClInclude Include="include\hl2sdk-css\public\studio.h" />
+    <ClInclude Include="include\hl2sdk-css\public\surfinfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\texture_group_names.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\annotations.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\basetypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\commonmacros.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\dbg.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\dbgflag.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\EventMasks.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\EventModes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\fasttimer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\ia32detect.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\icommandline.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\IOCTLCodes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\K8PerformanceCounters.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\l2cache.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\mem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\memalloc.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\memdbgoff.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\memdbgon.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\minidump.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\P4PerformanceCounters.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\P5P6PerformanceCounters.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\platform.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\pmc360.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\PMELib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\progressbar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\protected_things.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\systeminformation.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\testthread.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\threadtools.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\tslist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\validator.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\valobject.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\valve_off.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\valve_on.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\vcrmode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\vcr_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\vprof.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\wchartypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier0\xbox_codeline_defines.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\bitbuf.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\byteswap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\callqueue.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\characterset.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\checksum_crc.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\checksum_md5.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\CommandBuffer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\convar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\convar_serverbounded.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\datamanager.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\delegates.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\diff.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\fmtstr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\functors.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\generichash.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\iconvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\interface.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\KeyValues.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\lzmaDecoder.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\lzss.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\mempool.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\memstack.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\netadr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\processor_detect.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\rangecheckedvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\refcount.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\smartptr.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\stringpool.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\strtools.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\tier1.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\tokenreader.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\uniqueid.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlbidirectionalset.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlblockmemory.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlbuffer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlbufferutil.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utldict.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlenvelope.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlfixedmemory.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlflags.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlhandletable.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlhash.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlhashdict.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlintrusivelist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utllinkedlist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlmap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlmemory.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlmultilist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlntree.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlobjectreference.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlpriorityqueue.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlqueue.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlrbtree.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlsoacontainer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\UtlSortVector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlstack.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlstring.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\UtlStringMap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlsymbol.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier1\utlvector.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\beamsegdraw.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\camerautils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\fileutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\keybindings.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\meshutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\p4helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\renderutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\riff.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\soundutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\tier2.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\tier2dm.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\utlstreambuffer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier2\vconfig.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier3\choreoutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier3\mdlutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier3\scenetokenprocessor.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier3\tier3.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tier3\tier3dm.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\iclientenginetools.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\ienginetool.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\iserverenginetools.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\itooldictionary.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\itoolentity.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\itoolframework.h" />
+    <ClInclude Include="include\hl2sdk-css\public\toolframework\itoolsystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\tools\bonelist.h" />
+    <ClInclude Include="include\hl2sdk-css\public\trace.h" />
+    <ClInclude Include="include\hl2sdk-css\public\UnicodeFileHelpers.h" />
+    <ClInclude Include="include\hl2sdk-css\public\unicode\unicode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\unitlib\unitlib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\UtlCachedFileData.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vallocator.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vaudio\ivaudio.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vcollide.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vcollide_parse.h" />
+    <ClInclude Include="include\hl2sdk-css\public\VGuiMatSurface\IMatSystemSurface.h" />
+    <ClInclude Include="include\hl2sdk-css\public\VGuiMatSurface\IMatSystemSurfaceV5.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\Cursor.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\Dar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IBorder.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IClientPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IHTML.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IImage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IInput.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IInputInternal.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\ILocalize.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IScheme.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\ISurface.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\ISurfaceV30.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\ISystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IVGui.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IVguiMatInfo.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\IVguiMatInfoVar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\KeyCode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\MouseCode.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\Point.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui\VGUI.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\AnalogBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\AnimatingImagePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\AnimationController.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\BitmapImagePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\BuildGroup.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\BuildModeDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Button.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\CheckButton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\CheckButtonList.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\CircularProgressBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ComboBox.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\consoledialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ControllerMap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Controls.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\DialogManager.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\DirectorySelectDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Divider.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\EditablePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ExpandButton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\FileOpenDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\FileOpenStateMachine.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\FocusNavGroup.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Frame.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\GraphPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\HTML.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Image.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ImageList.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ImagePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\InputDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\KeyBindingHelpDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\KeyBindingMap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\KeyBoardEditorDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\KeyRepeat.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Label.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ListPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ListViewPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Menu.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MenuBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MenuButton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MenuItem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MessageBox.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MessageDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\MessageMap.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Panel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PanelAnimationVar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PanelListPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\pch_vgui_controls.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PerforceFileExplorer.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PerforceFileList.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\perforcefilelistframe.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PHandle.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ProgressBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ProgressBox.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PropertyDialog.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PropertyPage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\PropertySheet.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\QueryBox.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\RadioButton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\RichText.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\RotatingProgressBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\savedocumentquery.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ScalableImagePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ScrollableEditablePanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ScrollBar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ScrollBarSlider.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\SectionedListPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Slider.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Splitter.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\subrectimage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\TextEntry.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\TextImage.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ToggleButton.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\Tooltip.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\ToolWindow.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\TreeView.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\TreeViewListControl.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\URLLabel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\WizardPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vgui_controls\WizardSubPanel.h" />
+    <ClInclude Include="include\hl2sdk-css\public\view_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\collision_set.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\constraints.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\friction.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\object_hash.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\performance.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\player_controller.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\stats.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\vehicles.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics\virtualmesh.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics_interface.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vphysics_interfaceV30.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\cvar.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\IKeyValuesSystem.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\iprocessutils.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\jobthread.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\pch_vstdlib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\random.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\vcover.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vstdlib\vstdlib.h" />
+    <ClInclude Include="include\hl2sdk-css\public\vtf\vtf.h" />
+    <ClInclude Include="include\hl2sdk-css\public\wadtypes.h" />
+    <ClInclude Include="include\hl2sdk-css\public\winlite.h" />
+    <ClInclude Include="include\hl2sdk-css\public\worldsize.h" />
+    <ClInclude Include="include\hl2sdk-css\public\xwvfile.h" />
+    <ClInclude Include="include\hl2sdk-css\public\zip\XUnzip.h" />
+    <ClInclude Include="include\hl2sdk-css\public\zip\XZip.h" />
+    <ClInclude Include="include\hl2sdk-css\public\zip_uncompressed.h" />
+    <ClInclude Include="include\hl2sdk-css\public\zip_utils.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\captioncompiler\cbase.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\bsplib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\cmdlib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\consolewnd.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\filesystem_tools.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\ISQLDBReplyTarget.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\map_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\movie.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\mpi_stats.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\mstristrip.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\MySqlDatabase.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\pacifier.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\physdll.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\polylib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\qfiles.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\scratchpad_helpers.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\scriplib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\threads.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\tools_minidump.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\utilmatlib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\vmpi_tools_shared.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\common\wadlib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\demoinfo\demosmoothersamplesource.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\demoinfo\tooldemofile.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\glview\glos.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\motionmapper\motionmapper.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\nvtristriplib\nvtristrip.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\phonemeextractor\talkback.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\qc_eyes\QC_Eyes.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\qc_eyes\QC_EyesDlg.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\qc_eyes\resource.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\qc_eyes\StdAfx.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\smdlexp\smedefs.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\smdlexp\smexprc.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\csg.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\detail.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\disp_ivp.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\disp_vbsp.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\faces.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\ivp.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\map.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\materialpatch.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\materialsub.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\portals.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\vbsp.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\worldvertextransitionfixup.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vbsp\writebsp.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\ichannel.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\imysqlwrapper.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\iphelpers.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\messbuf.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\threadhelpers.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi_defs.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi_dispatch.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi_distribute_work.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi_filesystem.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vmpi\vmpi_parameters.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vprojtomake\makefilecreator.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vprojtomake\MsXml2.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vprojtomake\stdafx.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\disp_vrad.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\iincremental.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\imagepacker.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\incremental.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\leaf_ambient_lighting.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\lightmap.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\macro_texture.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\mpivrad.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\radial.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\vismat.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\vrad.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\vraddetailprops.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\vraddll.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad\vrad_dispcoll.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vrad_launcher\stdafx.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vvis\mpivis.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vvis\vis.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\vvis_launcher\StdAfx.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\xwad\goldsrc_bspfile.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\xwad\goldsrc_standin.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\xwad\lbmlib.h" />
+    <ClInclude Include="include\hl2sdk-css\utils\xwad\wadlib.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include=".\include\hl2sdk-css\lib\public\bitmap.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\choreoobjects.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\dmxloader.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\mathlib.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\matsys_controls.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\particles.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\steam_api.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\tier0.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\tier1.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\tier2.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\tier3.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\vgui_controls.lib" />
-    <Library Include=".\include\hl2sdk-css\lib\public\vstdlib.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".\game\client\client_hl2mp.vpc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\bitmap.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\choreoobjects.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\dmxloader.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\mathlib.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\matsys_controls.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\particles.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\steam_api.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier0.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier1.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier2.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\tier3.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\vgui_controls.lib" />
+    <Library Include="$(ProjectDir)include\hl2sdk-css\lib\public\vstdlib.lib" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="assets\readme.txt" />
